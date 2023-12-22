@@ -8,7 +8,7 @@ const Banner = () => {
     const {user}=useAuth();
     console.log(user);
     return (
-        <div>
+        <div className="my-10">
             {/* <!-- Hero --> */}
 <div className="relative overflow-hidden">
   {/* <!-- Gradients --> */}

@@ -66,12 +66,6 @@ const Navber = () => {
       >
         <Link to={"/contact"}>Contact Us</Link>
       </a>
-      <a
-        className="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
-        href="#"
-      >
-        <Link to={"/allpackage"}>All Packages</Link>
-      </a>
       <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
         <button
           type="button"
@@ -96,7 +90,7 @@ const Navber = () => {
               href="#"
               aria-label="Brand"
             >
-              Tourisom & Travel
+              SCC Technovision
             </a>
             <div className="md:hidden">
               <button

@@ -66,13 +66,13 @@ const Signup = () => {
       <Helmet>
         <title>Tourist | Signup</title>
       </Helmet>
-      <div className="mt-10">
+      <div className="mt-10 bg-gray-400 mx-10 rounded-lg">
         <div className="flex flex-col lg:flex-row-reverse gap-10">
           <div className="text-center lg:text-center">
             <h1 className="text-5xl font-bold mb-9">Signup Here</h1>
             <img src="https://i.ibb.co/426JvF3/authentication2.png" alt="" />
           </div>
-          <div className=" w-full max-w-lg shadow-2xl bg-base-300 rounded pt-8 p-4">
+          <div className=" w-full max-w-lg bg-base-300 rounded pt-8 p-4">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="grid grid-cols-2 gap-4">
                 <div className="form-control">
