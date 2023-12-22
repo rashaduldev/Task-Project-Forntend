@@ -16,7 +16,8 @@ import AuthProvider from './Provider/AuthProvider';
 import DashBoard from './Layout/Dashboard';
 import Dash from './Pages/Dashboard/Dash';
 import Task from './Pages/Dashboard/Task';
-import NewTask from './Pages/Dashboard/NewTask/NewTask';
+import CreateTask from './Pages/Dashboard/NewTask/NewTask';
+import PreviousTasks from './Pages/Dashboard/previousTask/previousTask';
 
 
 const router = createBrowserRouter([
@@ -57,11 +58,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard/previoustask',
-        element:<previousTask></previousTask>
+        element:<PreviousTasks></PreviousTasks>
       },
       {
         path: '/dashboard/newtask',
-        element:<NewTask></NewTask>
+        element:<CreateTask></CreateTask>
       },
       {
         path: '/dashboard/alltask',

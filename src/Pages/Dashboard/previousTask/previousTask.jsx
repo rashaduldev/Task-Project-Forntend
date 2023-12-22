@@ -1,11 +1,16 @@
+import React from 'react';
 
-
-const previousTask = () => {
-    return (
-        <div>
-            <h1>Previous task</h1>
-        </div>
-    );
+const PreviousTasks = ({ tasks }) => {
+  return (
+    <div>
+      <h2>Previous Tasks</h2>
+      <ul>
+        {tasks?.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
-export default previousTask;
+export default PreviousTasks;
