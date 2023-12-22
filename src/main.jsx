@@ -13,6 +13,8 @@ import Signup from './Pages/Signup/Signup';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import AuthProvider from './Provider/AuthProvider';
+import DashBoard from './Layout/Dashboard';
+import Dash from './Pages/Dashboard/Dash';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,16 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: '/dashboard',
+    element:<DashBoard></DashBoard>,
+    children:[
+      {
+        path: '/dashboard',
+        element:<Dash></Dash>,
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
