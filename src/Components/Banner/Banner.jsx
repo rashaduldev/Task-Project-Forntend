@@ -1,7 +1,12 @@
-import PrivetRoute from "../../Route/PrivetRoute";
+import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+
+
 
 
 const Banner = () => {
+    const {user}=useAuth();
+    console.log(user);
     return (
         <div>
             {/* <!-- Hero --> */}
@@ -34,12 +39,55 @@ const Banner = () => {
 
         {/* <!-- Buttons --> */}
         <div className="mt-8 gap-3 flex justify-center">
-        <PrivetRoute>
-        <a className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-          Let’s Explore
-            <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        
+         {
+            user?.email ? 
+            <Link to={'/dashboard'}>
+            <a
+               className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+               href="#"
+             >
+               Let’s Explore           
+               <svg
+                 className="flex-shrink-0 w-4 h-4"
+                 xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 strokeWidth="2"
+                 strokeLinecap="round"
+                 strokeLinejoin="round"
+               >
+                 <path d="m9 18 6-6-6-6" />
+               </svg>
+             </a>
+            </Link>
+            :
+            <Link to={'/login'}>
+         <a
+            className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+            href="#"
+          >
+            Let’s Explore           
+            <svg
+              className="flex-shrink-0 w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
           </a>
-        </PrivetRoute>
+         </Link>
+         }
           <a className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
             <svg className="flex-shrink-0 w-4 h-4" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.875 18C8.531 18 9.875 16.656 9.875 15V12H6.875C5.219 12 3.875 13.344 3.875 15C3.875 16.656 5.219 18 6.875 18Z" fill="#0ACF83"></path>
