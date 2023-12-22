@@ -15,6 +15,9 @@ import Contact from './Pages/Contact/Contact';
 import AuthProvider from './Provider/AuthProvider';
 import DashBoard from './Layout/Dashboard';
 import Dash from './Pages/Dashboard/Dash';
+import Task from './Pages/Dashboard/Task';
+import NewTask from './Pages/Dashboard/NewTask/NewTask';
+
 
 const router = createBrowserRouter([
   {
@@ -51,7 +54,19 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element:<Dash></Dash>,
-      }
+      },
+      {
+        path: '/dashboard/previoustask',
+        element:<previousTask></previousTask>
+      },
+      {
+        path: '/dashboard/newtask',
+        element:<NewTask></NewTask>
+      },
+      {
+        path: '/dashboard/alltask',
+        element:<Task></Task>
+      },
     ]
   }
 ]);

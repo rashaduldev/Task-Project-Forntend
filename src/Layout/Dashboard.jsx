@@ -27,6 +27,22 @@ import useAuth from "../Hooks/useAuth";
                   </NavLink>
                 </li>
                 <li className="mb-2">
+                  <NavLink to={"/dashboard/previoustask"}>
+                    <div className="flex items-center gap-3">
+                    <FaMoneyBill></FaMoneyBill>
+                    <p>Previous task</p>
+                    </div>
+                  </NavLink>
+                </li>
+                <li className="mb-2">
+                  <NavLink to={"/dashboard/newtask"}>
+                    <div className="flex items-center gap-3">
+                    <FaMoneyBill></FaMoneyBill>
+                    <p>New task</p>
+                    </div>
+                  </NavLink>
+                </li>
+                <li className="mb-2">
                   <NavLink to={"/dashboard/payment"}>
                     <div className="flex items-center gap-3">
                     <FaMoneyBill></FaMoneyBill>
@@ -35,7 +51,7 @@ import useAuth from "../Hooks/useAuth";
                   </NavLink>
                 </li>
                 <li className="mb-2">
-                  <NavLink to={"/dashboard/list"}>
+                  <NavLink to={"/dashboard/alltask"}>
                     <div className="flex items-center gap-3">
                     <FaCartShopping></FaCartShopping>
                     <p>All Task</p>
