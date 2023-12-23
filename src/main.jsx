@@ -18,6 +18,8 @@ import Dash from './Pages/Dashboard/Dash';
 import Task from './Pages/Dashboard/Task';
 import CreateTask from './Pages/Dashboard/NewTask/NewTask';
 import PreviousTasks from './Pages/Dashboard/previousTask/previousTask';
+import store from './Pages/Signup/store';
+
 
 
 const router = createBrowserRouter([
@@ -74,7 +76,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <AuthProvider>
+   <AuthProvider store={store}>
    <RouterProvider router={router} />
    </AuthProvider>
   </React.StrictMode>,
