@@ -3,7 +3,6 @@ import {
     FaCalendar,
     FaCartShopping,
     FaHouseMedical,
-    FaMoneyBill,
   } from "react-icons/fa6";
   import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
@@ -27,30 +26,6 @@ import useAuth from "../Hooks/useAuth";
                   </NavLink>
                 </li>
                 <li className="mb-2">
-                  <NavLink to={"/dashboard/previoustask"}>
-                    <div className="flex items-center gap-3">
-                    <FaMoneyBill></FaMoneyBill>
-                    <p>Previous task</p>
-                    </div>
-                  </NavLink>
-                </li>
-                <li className="mb-2">
-                  <NavLink to={"/dashboard/newtask"}>
-                    <div className="flex items-center gap-3">
-                    <FaMoneyBill></FaMoneyBill>
-                    <p>New task</p>
-                    </div>
-                  </NavLink>
-                </li>
-                <li className="mb-2">
-                  <NavLink to={"/dashboard/payment"}>
-                    <div className="flex items-center gap-3">
-                    <FaMoneyBill></FaMoneyBill>
-                    <p>Assign task</p>
-                    </div>
-                  </NavLink>
-                </li>
-                <li className="mb-2">
                   <NavLink to={"/dashboard/alltask"}>
                     <div className="flex items-center gap-3">
                     <FaCartShopping></FaCartShopping>
@@ -58,15 +33,6 @@ import useAuth from "../Hooks/useAuth";
                     </div>
                   </NavLink>
                 </li>
-                <li className="mb-2">
-                  <NavLink to={"/dashboard/booking"}>
-                    <div className="flex items-center gap-3">
-                    <FaCalendar></FaCalendar>
-                    <p>TO-DO List</p>
-                    </div>
-                  </NavLink>
-                </li>
-              
                 <li className="mb-2">
                   <NavLink to={"/dashboard/review"}>
                     <div className="flex items-center gap-3">

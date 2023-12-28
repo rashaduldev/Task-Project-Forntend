@@ -52,7 +52,7 @@ const Navber = () => {
         className="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
         href="#"
       >
-        <Link to={"/blogs"}>Blogs</Link>
+        <Link to={"/blog"}>Blogs</Link>
       </a>
       <a
         className="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
