@@ -8,6 +8,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
 
 const AllTask = () => {
     const [tasks,setTasks]=useState([]);
+      
 
     useEffect   (() => {
         const storedTasks = localStorage.getItem('tasks');
