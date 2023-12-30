@@ -18,6 +18,7 @@ import Dash from './Pages/Dashboard/Dash';
 import store from './Pages/Signup/store';
 import Blog from './Pages/Blog/Blog';
 import AllTask from './Pages/Dashboard/AllTask/AllTask';
+import PrivetRoute from './Route/PrivetRoute';
 
 
 
@@ -55,7 +56,9 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element:<DashBoard></DashBoard>,
+    element:<PrivetRoute>
+      <DashBoard></DashBoard>
+    </PrivetRoute>,
     children:[
       {
         path: '/dashboard',

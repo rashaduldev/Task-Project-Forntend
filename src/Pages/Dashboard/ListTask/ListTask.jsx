@@ -21,7 +21,8 @@ const ListTask = ({ tasks, setTasks }) => {
 
   console.log(tasks);
   return (
-    <div className="flex flow-row gap-20">
+ <div>
+     <div className="flex flow-row gap-20">
       {statuses.map((status, index) => (
         <Section
           key={index}
@@ -34,6 +35,7 @@ const ListTask = ({ tasks, setTasks }) => {
         ></Section>
       ))}
     </div>
+ </div>
   );
 };
 
